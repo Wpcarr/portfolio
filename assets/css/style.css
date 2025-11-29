@@ -60,6 +60,7 @@ body{
   flex-direction:column;
   justify-content:space-between;
   background:transparent;
+  height: 100vh;
 }
 
 .brand .brand-link{
@@ -252,7 +253,7 @@ body{
 
 
 /* About */
-.about-grid{display:grid;grid-template-columns:1fr 260px;gap:20px;align-items:start}
+.about-grid{display:grid;grid-template-columns:1fr 260px;gap:30px;align-items:start}
 .about-details p{margin:6px 0}
 
 /* Contact form */

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const targetId = this.getAttribute('href').slice(1);
       const target = document.getElementById(targetId);
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
 
       // Close mobile nav if open
@@ -17,21 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Highlight active nav on scroll
-  const sections = Array.from(document.querySelectorAll('main section[id]'));
-  function onScroll() {
-    const scrollPos = window.scrollY + 120;
-    let current = sections[0];
-    for (const sec of sections) {
-      if (sec.offsetTop <= scrollPos) current = sec;
-    }
-    const id = current.id;
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-    });
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  
 
   // Mobile nav toggle
   const navToggle = document.getElementById('navToggle');
