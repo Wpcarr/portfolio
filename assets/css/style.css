@@ -61,6 +61,9 @@ body{
   justify-content:space-between;
   background:transparent;
   height: 100vh;
+   background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+  box-shadow: 4px 0 20px rgba(0,0,0,0.06);
 }
 
 .brand .brand-link{
@@ -256,6 +259,31 @@ body{
 .about-grid{display:grid;grid-template-columns:1fr 260px;gap:30px;align-items:start}
 .about-details p{margin:6px 0}
 
+.about-details p {
+  margin: 6px 0;
+  font-size: 16px;
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+  opacity: 0.9;
+  transition: 0.2s;
+}
+
+.about-details p:hover {
+  opacity: 1;
+}
+
+.about-details a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+#contact a {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  color: var(--accent);
+
+}
+
 /* Contact form */
 .contact-form{display:flex;flex-direction:column;gap:10px;max-width:640px}
 .contact-form label{font-size:13px;color:var(--muted)}
@@ -265,8 +293,13 @@ body{
 }
 .form-actions{margin-top:8px}
 
+
 /* Footer */
 .site-footer{margin:48px 0 12px;color:var(--muted);font-size:13px}
+.site-footer a{
+  color:var(--accent);
+  text-decoration:underline;
+}
 
 /* Responsive */
 @media (max-width:900px){

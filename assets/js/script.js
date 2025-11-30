@@ -45,9 +45,10 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('year').textContent = new Date().getFullYear();
 });
 
-// Simple contact handler (no backend) — replace with your submission endpoint or third-party form
+// Contact form handling
 function handleForm(e) {
   e.preventDefault();
+
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
   const message = document.getElementById('message').value.trim();
@@ -57,8 +58,13 @@ function handleForm(e) {
     return;
   }
 
-  // For now, open mail client as fallback
-  const subject = encodeURIComponent(`Portfolio contact from ${name}`);
-  const body = encodeURIComponent(`${message}\n\n— ${name}\n${email}`);
-  window.location.href = `mailto:you@example.com?subject=${subject}&body=${body}`;
+  const to = "wesleypcarr@hotmail.com";
+
+  const subject = encodeURIComponent(`Portfolio Contact — ${name}`);
+  const body = encodeURIComponent(
+    `${message}\n\n-----\nFrom: ${name}\nEmail: ${email}`
+  );
+
+  window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
 }
+
