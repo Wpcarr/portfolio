@@ -235,6 +235,7 @@ body{
   flex-direction:column;
   justify-content:space-between;
   min-height:120px;
+  margin-bottom: 3%;
 }
 .project-title{margin:0 0 8px;font-size:16px}
 .project-desc{margin:0 0 12px;color:var(--muted);font-size:14px}
